@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>AbjadObject &mdash; Evans API  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/abjad.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/uqbar.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script defer="defer" src="../../../_static/copybutton.js"></script>
+        <script src="../../../_static/ga.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="AbjadValueObject" href="AbjadValueObject.html" />
+    <link rel="prev" title="consort" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home" alt="Documentation Home"> Evans API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Evans API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">evans</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../commands.html">commands</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">consort</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">AbjadObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AbjadValueObject.html">AbjadValueObject</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogicalTieCollection.html">LogicalTieCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RatioPartsExpression.html">RatioPartsExpression</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TimespanCollection.html">TimespanCollection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TimespanCollectionNode.html">TimespanCollectionNode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TimespanSimultaneity.html">TimespanSimultaneity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iterate_nwise.html">iterate_nwise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rotate.html">rotate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../handlers.html">handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../metmod.html">metmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pitch.html">pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rtm.html">rtm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../segmentmaker.html">segmentmaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequence.html">sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../timespan.html">timespan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Evans API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Evans API</a> &raquo;</li>
+        
+          <li><a href="../index.html">evans</a> &raquo;</li>
+        
+          <li><a href="index.html">consort</a> &raquo;</li>
+        
+      <li>AbjadObject</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/evans/consort/AbjadObject.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-evans.consort.AbjadObject">
+<span id="abjadobject"></span><span id="evans-consort-abjadobject"></span><h1>AbjadObject<a class="headerlink" href="#module-evans.consort.AbjadObject" title="Permalink to this headline">¶</a></h1>
+<div class="svg-container docutils container">
+<div class="graphviz"><object data="../../../_images/inheritance-7304c6d42fdb4a18335462393313965fcf48acfa.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">digraph InheritanceGraph {
+	graph [bgcolor=transparent,
+		color=lightsteelblue2,
+		fontname=Arial,
+		fontsize=10,
+		outputorder=edgesfirst,
+		overlap=prism,
+		penwidth=2,
+		rankdir=LR,
+		splines=spline,
+		style=&quot;dashed, rounded&quot;,
+		truecolor=true
+	];
+	node [colorscheme=pastel19,
+		fontname=Arial,
+		fontsize=10,
+		height=0,
+		penwidth=2,
+		shape=box,
+		style=&quot;filled, rounded&quot;,
+		width=0
+	];
+	edge [color=lightslategrey,
+		penwidth=1
+	];
+	subgraph cluster_builtins {
+		graph [label=builtins];
+		node [color=1];
+		&quot;builtins.object&quot;		 [URL=&quot;https://docs.python.org/3.7/library/functions.html#object&quot;,
+			color=1,
+			label=object,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.consort&quot; {
+		graph [label=&quot;evans.consort&quot;];
+		node [color=2];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot;		 [URL=&quot;../api/evans/consort/AbjadObject.html#evans.consort.AbjadObject.AbjadObject&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Abjad\nObject&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadValueObject.AbjadValueObject&quot;		 [URL=&quot;../api/evans/consort/AbjadValueObject.html#evans.consort.AbjadValueObject.AbjadValueObject&quot;,
+			color=2,
+			label=&quot;Abjad\nValue\nObject&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.AbjadValueObject.AbjadValueObject&quot;		 [minlen=1];
+		&quot;evans.consort.LogicalTieCollection.LogicalTieCollection&quot;		 [URL=&quot;../api/evans/consort/LogicalTieCollection.html#evans.consort.LogicalTieCollection.LogicalTieCollection&quot;,
+			color=2,
+			label=&quot;Logical\nTie\nCollection&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.LogicalTieCollection.LogicalTieCollection&quot;		 [minlen=2];
+		&quot;evans.consort.RatioPartsExpression.RatioPartsExpression&quot;		 [URL=&quot;../api/evans/consort/RatioPartsExpression.html#evans.consort.RatioPartsExpression.RatioPartsExpression&quot;,
+			color=2,
+			label=&quot;Ratio\nParts\nExpression&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.RatioPartsExpression.RatioPartsExpression&quot;		 [minlen=1];
+		&quot;evans.consort.TimespanCollection.TimespanCollection&quot;		 [URL=&quot;../api/evans/consort/TimespanCollection.html#evans.consort.TimespanCollection.TimespanCollection&quot;,
+			color=2,
+			label=&quot;Timespan\nCollection&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.TimespanCollection.TimespanCollection&quot;		 [minlen=2];
+		&quot;evans.consort.TimespanCollectionNode.TimespanCollectionNode&quot;		 [URL=&quot;../api/evans/consort/TimespanCollectionNode.html#evans.consort.TimespanCollectionNode.TimespanCollectionNode&quot;,
+			color=2,
+			label=&quot;Timespan\nCollection\nNode&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.TimespanCollectionNode.TimespanCollectionNode&quot;		 [minlen=1];
+		&quot;evans.consort.TimespanSimultaneity.TimespanSimultaneity&quot;		 [URL=&quot;../api/evans/consort/TimespanSimultaneity.html#evans.consort.TimespanSimultaneity.TimespanSimultaneity&quot;,
+			color=2,
+			label=&quot;Timespan\nSimultaneity&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.TimespanSimultaneity.TimespanSimultaneity&quot;		 [minlen=2];
+	}
+	&quot;builtins.object&quot; -&gt; &quot;evans.consort.AbjadObject.AbjadObject&quot;	 [minlen=1];
+}</p></object></div>
+</div>
+<dl class="py class">
+<dt id="evans.consort.AbjadObject.AbjadObject">
+<em class="property">class </em><code class="sig-prename descclassname">evans.consort.AbjadObject.</code><code class="sig-name descname">AbjadObject</code><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject" title="Permalink to this definition">¶</a></dt>
+<dd><hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.consort.AbjadObject.AbjadObject.__eq__" title="evans.consort.AbjadObject.AbjadObject.__eq__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></a></p></td>
+<td><p>Is true when ID of <cite>argument</cite> equals ID of Abjad object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.consort.AbjadObject.AbjadObject.__format__" title="evans.consort.AbjadObject.AbjadObject.__format__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code></a></p></td>
+<td><p>Formats Abjad object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.consort.AbjadObject.AbjadObject.__hash__" title="evans.consort.AbjadObject.AbjadObject.__hash__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code></a></p></td>
+<td><p>Hashes Abjad object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.consort.AbjadObject.AbjadObject.__ne__" title="evans.consort.AbjadObject.AbjadObject.__ne__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code></a></p></td>
+<td><p>Is true when Abjad object does not equal <cite>argument</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.consort.AbjadObject.AbjadObject.__repr__" title="evans.consort.AbjadObject.AbjadObject.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<td><p>Gets interpreter representation of Abjad object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.consort.AbjadObject.AbjadObject.__str__" title="evans.consort.AbjadObject.AbjadObject.__str__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code></a></p></td>
+<td><p>Return str(self).</p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.consort.AbjadObject.AbjadObject.__eq__">
+<em class="property">overridden </em><code class="sig-name descname">__eq__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">argument</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is true when ID of <cite>argument</cite> equals ID of Abjad object.
+Otherwise false.
+Returns true or false.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.consort.AbjadObject.AbjadObject.__format__">
+<em class="property">overridden </em><code class="sig-name descname">__format__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">format_specification</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject.__format__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats Abjad object.
+Set <cite>format_specification</cite> to <cite>‘’</cite> or <cite>‘storage’</cite>.
+Interprets <cite>‘’</cite> equal to <cite>‘storage’</cite>.
+Returns string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.consort.AbjadObject.AbjadObject.__hash__">
+<em class="property">overridden </em><code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hashes Abjad object.
+Required to be explicitly redefined on Python 3 if __eq__ changes.
+Returns integer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.consort.AbjadObject.AbjadObject.__ne__">
+<em class="property">overridden </em><code class="sig-name descname">__ne__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">argument</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject.__ne__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is true when Abjad object does not equal <cite>argument</cite>.
+Otherwise false.
+Returns true or false.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.consort.AbjadObject.AbjadObject.__repr__">
+<em class="property">overridden </em><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets interpreter representation of Abjad object.
+Returns string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.consort.AbjadObject.AbjadObject.__str__">
+<em class="property">overridden </em><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.consort.AbjadObject.AbjadObject.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="AbjadValueObject.html" class="btn btn-neutral float-right" title="AbjadValueObject" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="consort" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Gregory Rowland Evans
+      <span class="lastupdated">
+        Last updated on Jul 20, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

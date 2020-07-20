@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>segmentmaker &mdash; Evans API  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/abjad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/uqbar.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script defer="defer" src="../../_static/copybutton.js"></script>
+        <script src="../../_static/ga.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sequence" href="sequence.html" />
+    <link rel="prev" title="rtm" href="rtm.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Evans API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Evans API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">evans</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="commands.html">commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="consort/index.html">consort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="handlers.html">handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metmod.html">metmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pitch.html">pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtm.html">rtm</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">segmentmaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequence.html">sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timespan.html">timespan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Evans API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Evans API</a> &raquo;</li>
+        
+          <li><a href="index.html">evans</a> &raquo;</li>
+        
+      <li>segmentmaker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/evans/segmentmaker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-evans.segmentmaker">
+<span id="segmentmaker"></span><span id="evans-segmentmaker"></span><h1>segmentmaker<a class="headerlink" href="#module-evans.segmentmaker" title="Permalink to this headline">¶</a></h1>
+<div class="svg-container docutils container">
+<div class="graphviz"><object data="../../_images/inheritance-dfc0e0041ff5837bd829ff2b152c4d5a0c3f3010.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">digraph InheritanceGraph {
+	graph [bgcolor=transparent,
+		color=lightsteelblue2,
+		fontname=Arial,
+		fontsize=10,
+		outputorder=edgesfirst,
+		overlap=prism,
+		penwidth=2,
+		rankdir=LR,
+		splines=spline,
+		style=&quot;dashed, rounded&quot;,
+		truecolor=true
+	];
+	node [colorscheme=pastel19,
+		fontname=Arial,
+		fontsize=10,
+		height=0,
+		penwidth=2,
+		shape=box,
+		style=&quot;filled, rounded&quot;,
+		width=0
+	];
+	edge [color=lightslategrey,
+		penwidth=1
+	];
+	subgraph cluster_builtins {
+		graph [label=builtins];
+		node [color=1];
+		&quot;builtins.object&quot;		 [URL=&quot;https://docs.python.org/3.7/library/functions.html#object&quot;,
+			color=1,
+			label=object,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.segmentmaker&quot; {
+		graph [label=&quot;evans.segmentmaker&quot;];
+		node [color=2];
+		&quot;evans.segmentmaker.NoteheadBracketMaker&quot;		 [URL=&quot;../api/evans/segmentmaker.html#evans.segmentmaker.NoteheadBracketMaker&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Notehead\nBracket\nMaker&quot;,
+			target=_top];
+		&quot;evans.segmentmaker.SegmentMaker&quot;		 [URL=&quot;../api/evans/segmentmaker.html#evans.segmentmaker.SegmentMaker&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Segment\nMaker&quot;,
+			target=_top];
+	}
+	&quot;builtins.object&quot; -&gt; &quot;evans.segmentmaker.NoteheadBracketMaker&quot;	 [minlen=1];
+	&quot;builtins.object&quot; -&gt; &quot;evans.segmentmaker.SegmentMaker&quot;	 [minlen=2];
+}</p></object></div>
+</div>
+<hr/><p class="section-header rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.NoteheadBracketMaker" title="evans.segmentmaker.NoteheadBracketMaker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NoteheadBracketMaker</span></code></a></p></td>
+<td><p>Writes tuplet brackets with inserted note head.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker" title="evans.segmentmaker.SegmentMaker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SegmentMaker</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="evans.segmentmaker.NoteheadBracketMaker">
+<em class="property">class </em><code class="sig-prename descclassname">evans.segmentmaker.</code><code class="sig-name descname">NoteheadBracketMaker</code><a class="headerlink" href="#evans.segmentmaker.NoteheadBracketMaker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes tuplet brackets with inserted note head.</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tuplet</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Tuplet</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;cs&#39;8 d&#39;8&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tuplet_2</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Tuplet</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">components</span><span class="o">=</span><span class="p">[</span><span class="n">abjad</span><span class="o">.</span><span class="n">Note</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">)),</span> <span class="n">tuplet</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tuplet_2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">new_brackets</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">NoteheadBracketMaker</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">new_brackets</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-fb15aae9f5a7efbc540c9010f66a5641157b5c3d7bd6ea8be5eb5091a944d3c3.ly"><img src="../../_images/lilypond-fb15aae9f5a7efbc540c9010f66a5641157b5c3d7bd6ea8be5eb5091a944d3c3.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.NoteheadBracketMaker.__call__" title="evans.segmentmaker.NoteheadBracketMaker.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.segmentmaker.NoteheadBracketMaker.__repr__" title="evans.segmentmaker.NoteheadBracketMaker.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<td><p>Return repr(self).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.NoteheadBracketMaker.__str__" title="evans.segmentmaker.NoteheadBracketMaker.__str__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code></a></p></td>
+<td><p>Return str(self).</p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.segmentmaker.NoteheadBracketMaker.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.NoteheadBracketMaker.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.NoteheadBracketMaker.__repr__">
+<em class="property">overridden </em><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.NoteheadBracketMaker.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.NoteheadBracketMaker.__str__">
+<em class="property">overridden </em><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.NoteheadBracketMaker.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.segmentmaker.SegmentMaker">
+<em class="property">class </em><code class="sig-prename descclassname">evans.segmentmaker.</code><code class="sig-name descname">SegmentMaker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">abbreviations</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_final_grand_pause</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">barline</span><span class="o">=</span><span class="default_value">'||'</span></em>, <em class="sig-param"><span class="n">beam_pattern</span><span class="o">=</span><span class="default_value">'runs'</span></em>, <em class="sig-param"><span class="n">beam_rests</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">clef_handlers</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">colophon</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">commands</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">current_directory</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cutaway</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">fermata</span><span class="o">=</span><span class="default_value">'scripts.ushortfermata'</span></em>, <em class="sig-param"><span class="n">instruments</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_staves</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">page_break_counts</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rehearsal_mark</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">score_includes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">score_template</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">segment_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tempo</span><span class="o">=</span><span class="default_value">1, 4, 90</span></em>, <em class="sig-param"><span class="n">time_signatures</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tuplet_bracket_noteheads</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker" title="Permalink to this definition">¶</a></dt>
+<dd><hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.__repr__" title="evans.segmentmaker.SegmentMaker.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<td><p>Return repr(self).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.__str__" title="evans.segmentmaker.SegmentMaker.__str__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code></a></p></td>
+<td><p>Return str(self).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.beam_score" title="evans.segmentmaker.SegmentMaker.beam_score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">beam_score</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.build_segment" title="evans.segmentmaker.SegmentMaker.build_segment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_segment</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.call_handlers" title="evans.segmentmaker.SegmentMaker.call_handlers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_handlers</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.rewrite_meter" title="evans.segmentmaker.SegmentMaker.rewrite_meter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rewrite_meter</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.SegmentMaker.transform_brackets" title="evans.segmentmaker.SegmentMaker.transform_brackets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_brackets</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.__repr__">
+<em class="property">overridden </em><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.__str__">
+<em class="property">overridden </em><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.beam_score">
+<code class="sig-name descname">beam_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.beam_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.build_segment">
+<code class="sig-name descname">build_segment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.build_segment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.call_handlers">
+<code class="sig-name descname">call_handlers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">commands</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.call_handlers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.rewrite_meter">
+<code class="sig-name descname">rewrite_meter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.rewrite_meter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.segmentmaker.SegmentMaker.transform_brackets">
+<code class="sig-name descname">transform_brackets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.SegmentMaker.transform_brackets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<hr/><p class="section-header rubric">Functions</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.segmentmaker.beam_meter" title="evans.segmentmaker.beam_meter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">beam_meter</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="evans.segmentmaker.beam_meter">
+<code class="sig-prename descclassname">evans.segmentmaker.</code><code class="sig-name descname">beam_meter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">components</span></em>, <em class="sig-param"><span class="n">meter</span></em>, <em class="sig-param"><span class="n">offset_depth</span></em>, <em class="sig-param"><span class="n">include_rests</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.segmentmaker.beam_meter" title="Permalink to this definition">¶</a></dt>
+<dd><div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pre_tuplet_notes</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;8 c&#39;8 c&#39;8&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tuplet</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Tuplet</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;c&#39;8 r8 c&#39;8&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">post_tuplet_notes</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;8 c&#39;8 c&#39;8&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="p">[</span><span class="n">pre_tuplet_notes</span><span class="p">[:],</span> <span class="n">tuplet</span><span class="p">,</span> <span class="n">post_tuplet_notes</span><span class="p">[:]]:</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">evans</span><span class="o">.</span><span class="n">beam_meter</span><span class="p">(</span><span class="n">components</span><span class="o">=</span><span class="n">staff</span><span class="p">[:],</span> <span class="n">meter</span><span class="o">=</span><span class="n">abjad</span><span class="o">.</span><span class="n">Meter</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span> <span class="n">offset_depth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-667d45a64b5e54f9b1aa5bce1d1ece1f5972d72ebc7c6c0d40478861a7fb17cc.ly"><img src="../../_images/lilypond-667d45a64b5e54f9b1aa5bce1d1ece1f5972d72ebc7c6c0d40478861a7fb17cc.cropped.svg"/></a>
+</div></div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sequence.html" class="btn btn-neutral float-right" title="sequence" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="rtm.html" class="btn btn-neutral float-left" title="rtm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Gregory Rowland Evans
+      <span class="lastupdated">
+        Last updated on Jul 20, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
