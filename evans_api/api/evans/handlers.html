@@ -1,0 +1,1833 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>handlers &mdash; Evans API  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/abjad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/uqbar.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script defer="defer" src="../../_static/copybutton.js"></script>
+        <script src="../../_static/ga.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="metmod" href="metmod.html" />
+    <link rel="prev" title="rotate" href="consort/rotate.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Evans API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Evans API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">evans</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="commands.html">commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="consort/index.html">consort</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metmod.html">metmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pitch.html">pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtm.html">rtm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="segmentmaker.html">segmentmaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequence.html">sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timespan.html">timespan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Evans API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Evans API</a> &raquo;</li>
+        
+          <li><a href="index.html">evans</a> &raquo;</li>
+        
+      <li>handlers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/evans/handlers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-evans.handlers">
+<span id="handlers"></span><span id="evans-handlers"></span><h1>handlers<a class="headerlink" href="#module-evans.handlers" title="Permalink to this headline">¶</a></h1>
+<div class="svg-container docutils container">
+<div class="graphviz"><object data="../../_images/inheritance-5ec1b91cfc1e9b41a3dbc8a287dcf38283be05ed.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">digraph InheritanceGraph {
+	graph [bgcolor=transparent,
+		color=lightsteelblue2,
+		fontname=Arial,
+		fontsize=10,
+		outputorder=edgesfirst,
+		overlap=prism,
+		penwidth=2,
+		rankdir=LR,
+		splines=spline,
+		style=&quot;dashed, rounded&quot;,
+		truecolor=true
+	];
+	node [colorscheme=pastel19,
+		fontname=Arial,
+		fontsize=10,
+		height=0,
+		penwidth=2,
+		shape=box,
+		style=&quot;filled, rounded&quot;,
+		width=0
+	];
+	edge [color=lightslategrey,
+		penwidth=1
+	];
+	subgraph cluster_builtins {
+		graph [label=builtins];
+		node [color=1];
+		&quot;builtins.object&quot;		 [URL=&quot;https://docs.python.org/3.7/library/functions.html#object&quot;,
+			color=1,
+			label=object,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.handlers&quot; {
+		graph [label=&quot;evans.handlers&quot;];
+		node [color=2];
+		&quot;evans.handlers.ArticulationHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.ArticulationHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Articulation\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.BendHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.BendHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Bend\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.BisbigliandoHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.BisbigliandoHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Bisbigliando\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.ClefHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.ClefHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Clef\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.DynamicHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.DynamicHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Dynamic\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.GettatoHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.GettatoHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Gettato\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.GlissandoHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.GlissandoHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Glissando\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.GraceHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.GraceHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Grace\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.Handler&quot;,
+			color=black,
+			fontcolor=white,
+			label=Handler,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.ArticulationHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.BendHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.BisbigliandoHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.ClefHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.DynamicHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.GettatoHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.GlissandoHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.GraceHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.NoteheadHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.NoteheadHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Notehead\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.NoteheadHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.PitchHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.PitchHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Pitch\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.PitchHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.RhythmHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.RhythmHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Rhythm\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.RhythmHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.SlurHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.SlurHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Slur\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.SlurHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.TempoSpannerHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.TempoSpannerHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Tempo\nSpanner\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.TempoSpannerHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.TextSpanHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.TextSpanHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Text\nSpan\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.TextSpanHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.TrillHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.TrillHandler&quot;,
+			color=black,
+			fontcolor=white,
+			label=&quot;Trill\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.TrillHandler&quot;		 [minlen=3];
+	}
+	&quot;builtins.object&quot; -&gt; &quot;evans.handlers.Handler&quot;	 [minlen=1];
+}</p></object></div>
+</div>
+<hr/><p class="section-header rubric">Classes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.ArticulationHandler" title="evans.handlers.ArticulationHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArticulationHandler</span></code></a></p></td>
+<td><p>Articulation Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.BendHandler" title="evans.handlers.BendHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BendHandler</span></code></a></p></td>
+<td><p>Bend Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.BisbigliandoHandler" title="evans.handlers.BisbigliandoHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BisbigliandoHandler</span></code></a></p></td>
+<td><p>Bisbigliando Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.ClefHandler" title="evans.handlers.ClefHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClefHandler</span></code></a></p></td>
+<td><p>Clef Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.DynamicHandler" title="evans.handlers.DynamicHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicHandler</span></code></a></p></td>
+<td><p>Dynamic Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GettatoHandler" title="evans.handlers.GettatoHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GettatoHandler</span></code></a></p></td>
+<td><p>Gettato Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GlissandoHandler" title="evans.handlers.GlissandoHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GlissandoHandler</span></code></a></p></td>
+<td><p>Glissando Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GraceHandler" title="evans.handlers.GraceHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GraceHandler</span></code></a></p></td>
+<td><p>Grace Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Handler</span></code></a></p></td>
+<td><p>Handler Base Class</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.NoteheadHandler" title="evans.handlers.NoteheadHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NoteheadHandler</span></code></a></p></td>
+<td><p>Notehead Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.PitchHandler" title="evans.handlers.PitchHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PitchHandler</span></code></a></p></td>
+<td><p>Pitch Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.RhythmHandler" title="evans.handlers.RhythmHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RhythmHandler</span></code></a></p></td>
+<td><p>Rhythm Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.SlurHandler" title="evans.handlers.SlurHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SlurHandler</span></code></a></p></td>
+<td><p>Slur Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.TempoSpannerHandler" title="evans.handlers.TempoSpannerHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TempoSpannerHandler</span></code></a></p></td>
+<td><p>Tempo Spanner Handler</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TextSpanHandler" title="evans.handlers.TextSpanHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextSpanHandler</span></code></a></p></td>
+<td><p>Text Span Handler</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.TrillHandler" title="evans.handlers.TrillHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TrillHandler</span></code></a></p></td>
+<td><p>Trill Handler</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="evans.handlers.ArticulationHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">ArticulationHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">articulation_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">articulation_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">vector_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">vector_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Articulation Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Articulation Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 r4 c&#39;4 c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">art_lst</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="s2">&quot;staccato&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;tenuto&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;staccatissimo&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;open&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;halfopen&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;stopped&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;portato&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;tremolo&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">ArticulationHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">articulation_list</span><span class="o">=</span><span class="n">art_lst</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">articulation_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">vector_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-f1fb73a7c9e967a3cd29fc46bcb85f3fdd0e25116b67921c426686e7fb08f351.ly"><img src="../../_images/lilypond-f1fb73a7c9e967a3cd29fc46bcb85f3fdd0e25116b67921c426686e7fb08f351.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.ArticulationHandler.__call__" title="evans.handlers.ArticulationHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.ArticulationHandler.add_articulations" title="evans.handlers.ArticulationHandler.add_articulations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_articulations</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.ArticulationHandler.identifiers" title="evans.handlers.ArticulationHandler.identifiers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identifiers</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.ArticulationHandler.name" title="evans.handlers.ArticulationHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.ArticulationHandler.state" title="evans.handlers.ArticulationHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.add_articulations">
+<code class="sig-name descname">add_articulations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.add_articulations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.identifiers">
+<code class="sig-name descname">identifiers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.identifiers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.ArticulationHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ArticulationHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.BendHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">BendHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bend_amounts</span><span class="o">=</span><span class="default_value">[1]</span></em>, <em class="sig-param"><span class="n">bend_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">vector_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">bend_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">vector_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Bend Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bend Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">BendHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">bend_amounts</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">bend_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">vector_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-ff671363e69971156c03f4b901398320ff8fe2326ef7e6c9db076b5847acf624.ly"><img src="../../_images/lilypond-ff671363e69971156c03f4b901398320ff8fe2326ef7e6c9db076b5847acf624.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.BendHandler.__call__" title="evans.handlers.BendHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.BendHandler.add_bend" title="evans.handlers.BendHandler.add_bend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_bend</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.BendHandler.name" title="evans.handlers.BendHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.BendHandler.state" title="evans.handlers.BendHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.BendHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.BendHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.BendHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.BendHandler.add_bend">
+<code class="sig-name descname">add_bend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler.add_bend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.BendHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.BendHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BendHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.BisbigliandoHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">BisbigliandoHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fingering_list</span><span class="o">=</span><span class="default_value">[None]</span></em>, <em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[1]</span></em>, <em class="sig-param"><span class="n">padding</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">staff_padding</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">right_padding</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">bis_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">bool_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Bisbigliando Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bisbigliando Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;&#39;4 c&#39;&#39;4 c&#39;&#39;4 c&#39;&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">m</span> <span class="o">=</span> <span class="p">[</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;\markup {&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;\lower #1.5&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;\override #&#39;(graphical . #t)&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;\override #&#39;(size . 0.4)&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;\override #&#39;(thickness . 0.25)&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;\woodwind-diagram&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;#&#39;flute&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;#&#39;((cc . (one two three four five six)) (lh . (bes b gis)) (rh . (bes d dis ees cis c gz)))&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="sa">r</span><span class="s2">&quot;}&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">BisbigliandoHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">fingering_list</span><span class="o">=</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">m</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">staff_padding</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-017d59313d5396d5304b839161abb19eaf39fb4b32a6e5d38bf6bfe28bc80eeb.ly"><img src="../../_images/lilypond-017d59313d5396d5304b839161abb19eaf39fb4b32a6e5d38bf6bfe28bc80eeb.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.BisbigliandoHandler.__call__" title="evans.handlers.BisbigliandoHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.BisbigliandoHandler.add_spanner" title="evans.handlers.BisbigliandoHandler.add_spanner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_spanner</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.BisbigliandoHandler.name" title="evans.handlers.BisbigliandoHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.BisbigliandoHandler.state" title="evans.handlers.BisbigliandoHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.BisbigliandoHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.BisbigliandoHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.BisbigliandoHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.BisbigliandoHandler.add_spanner">
+<code class="sig-name descname">add_spanner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler.add_spanner" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.BisbigliandoHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.BisbigliandoHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.BisbigliandoHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.ClefHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">ClefHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">clef</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clef_shelf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowable_clefs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_extended_clefs</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ottava_shelf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">add_ottavas</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">extend_in_direction</span><span class="o">=</span><span class="default_value">'up'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ClefHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clef Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c,4 c&#39;4 c4 c&#39;&#39;4 c&#39;&#39;&#39;&#39;8 r8&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">ClefHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">clef</span><span class="o">=</span><span class="s2">&quot;bass&quot;</span><span class="p">,</span> <span class="n">add_extended_clefs</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">add_ottavas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-4d1c12cdf4bca60b7d6d3d48d235795552750af38ff60d940356420bf76658a3.ly"><img src="../../_images/lilypond-4d1c12cdf4bca60b7d6d3d48d235795552750af38ff60d940356420bf76658a3.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.ClefHandler.__call__" title="evans.handlers.ClefHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.ClefHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">voice</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ClefHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.ClefHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ClefHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.ClefHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.ClefHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.DynamicHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">DynamicHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dynamic_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">flare_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">flare_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">hold_first_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">hold_first_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">hold_last_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">hold_last_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">effort_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">effort_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">with_constante_hairpins</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">count_1</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">count_2</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">count_3</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">count_4</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">count_5</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Dynamic Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.DynamicHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dynamic Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 d&#39;4 e&#39;4 f&#39;4 r4 g&#39;4 r2&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">DynamicHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">dynamic_list</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;niente&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;mf&quot;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">flare_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">flare_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">hold_first_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,],</span>
+<span class="gp">... </span>    <span class="n">hold_first_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">hold_last_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">hold_last_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">effort_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">effort_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">first_group</span> <span class="o">=</span> <span class="n">staff</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">second_group</span> <span class="o">=</span> <span class="n">staff</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">first_group</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">second_group</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-011c9994a714710e1efc4da98713f39baa45f816b6d48690300b4b36dcdfa808.ly"><img src="../../_images/lilypond-011c9994a714710e1efc4da98713f39baa45f816b6d48690300b4b36dcdfa808.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.DynamicHandler.__call__" title="evans.handlers.DynamicHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.DynamicHandler.name" title="evans.handlers.DynamicHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.DynamicHandler.state" title="evans.handlers.DynamicHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.DynamicHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.DynamicHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.DynamicHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.DynamicHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.DynamicHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.DynamicHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.DynamicHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.DynamicHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.DynamicHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.DynamicHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.GettatoHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">GettatoHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">number_of_attacks</span><span class="o">=</span><span class="default_value">[4, 5, 6]</span></em>, <em class="sig-param"><span class="n">attack_number_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">actions</span><span class="o">=</span><span class="default_value">['throw', 'drop']</span></em>, <em class="sig-param"><span class="n">action_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[1]</span></em>, <em class="sig-param"><span class="n">vector_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">attack_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">action_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">vector_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Gettato Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gettato Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Voice</span><span class="p">(</span><span class="s2">&quot;c&#39;4 fs&#39;4 c&#39;&#39;4 gqs&#39;&#39;4&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Voice 1&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">GettatoHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">number_of_attacks</span><span class="o">=</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">actions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;throw&quot;</span><span class="p">,</span> <span class="s2">&quot;drop&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-5b8d9c5ad028e92cb859fa60aa6f5319a56d76b1a92d97618489dbbd04aab9f7.ly"><img src="../../_images/lilypond-5b8d9c5ad028e92cb859fa60aa6f5319a56d76b1a92d97618489dbbd04aab9f7.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GettatoHandler.__call__" title="evans.handlers.GettatoHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GettatoHandler.add_gettato" title="evans.handlers.GettatoHandler.add_gettato"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_gettato</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GettatoHandler.name" title="evans.handlers.GettatoHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GettatoHandler.state" title="evans.handlers.GettatoHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.GettatoHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.GettatoHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.GettatoHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.GettatoHandler.add_gettato">
+<code class="sig-name descname">add_gettato</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler.add_gettato" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.GettatoHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.GettatoHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GettatoHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.GlissandoHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">GlissandoHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">glissando_style</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line_style</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">apply_to</span><span class="o">=</span><span class="default_value">'runs'</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Glissando Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Glissando Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">GlissandoHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">line_style</span><span class="o">=</span><span class="s2">&quot;dotted-line&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">apply_to</span><span class="o">=</span><span class="s2">&quot;runs&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-6115b9de6d40c0f07be6337f511b4947580eece5d93c06ab1b29e6276749f8b0.ly"><img src="../../_images/lilypond-6115b9de6d40c0f07be6337f511b4947580eece5d93c06ab1b29e6276749f8b0.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GlissandoHandler.__call__" title="evans.handlers.GlissandoHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GlissandoHandler.add_glissando" title="evans.handlers.GlissandoHandler.add_glissando"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_glissando</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GlissandoHandler.name" title="evans.handlers.GlissandoHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GlissandoHandler.state" title="evans.handlers.GlissandoHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.GlissandoHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.GlissandoHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.GlissandoHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.GlissandoHandler.add_glissando">
+<code class="sig-name descname">add_glissando</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler.add_glissando" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.GlissandoHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.GlissandoHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GlissandoHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.GraceHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">GraceHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gesture_lengths</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">vector_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">gesture_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Grace Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GraceHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grace Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">GraceHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">gesture_lengths</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">[:])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-344a2adedc85ecc87e22b32621ededd644a47d7f06f9770e2d566407db70643e.ly"><img src="../../_images/lilypond-344a2adedc85ecc87e22b32621ededd644a47d7f06f9770e2d566407db70643e.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GraceHandler.__call__" title="evans.handlers.GraceHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.GraceHandler.name" title="evans.handlers.GraceHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.GraceHandler.state" title="evans.handlers.GraceHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.GraceHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GraceHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.GraceHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GraceHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.GraceHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GraceHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.GraceHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GraceHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.GraceHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.GraceHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.Handler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">Handler</code><a class="headerlink" href="#evans.handlers.Handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handler Base Class</p>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.Handler.__repr__" title="evans.handlers.Handler.__repr__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></a></p></td>
+<td><p>Return repr(self).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.Handler.__str__" title="evans.handlers.Handler.__str__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code></a></p></td>
+<td><p>Return str(self).</p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.Handler.__repr__">
+<em class="property">overridden </em><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.Handler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.Handler.__str__">
+<em class="property">overridden </em><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.Handler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.NoteheadHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">NoteheadHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">notehead_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transition</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">head_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">head_vector_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">transition_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">transition_vector_continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Notehead Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Notehead Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">NoteheadHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">notehead_list</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="s2">&quot;harmonic&quot;</span><span class="p">,</span> <span class="s2">&quot;triangle&quot;</span><span class="p">,</span> <span class="s2">&quot;slash&quot;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">transition</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">head_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">head_vector_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">transition_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">transition_vector_continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-7bb6b632a376babcaba28adff076d8da6cdaac32e4f9bb48389a48845973e1e2.ly"><img src="../../_images/lilypond-7bb6b632a376babcaba28adff076d8da6cdaac32e4f9bb48389a48845973e1e2.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.NoteheadHandler.__call__" title="evans.handlers.NoteheadHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.NoteheadHandler.add_noteheads" title="evans.handlers.NoteheadHandler.add_noteheads"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_noteheads</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.NoteheadHandler.name" title="evans.handlers.NoteheadHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.NoteheadHandler.state" title="evans.handlers.NoteheadHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.NoteheadHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.NoteheadHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.NoteheadHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.NoteheadHandler.add_noteheads">
+<code class="sig-name descname">add_noteheads</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler.add_noteheads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.NoteheadHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.NoteheadHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.NoteheadHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.PitchHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">PitchHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pitch_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_chord_duplicates</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">apply_all</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">as_ratios</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">chord_boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">chord_groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">to_ties</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pitch_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">chord_boolean_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">chord_groups_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Pitch Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.PitchHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pitch Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fractions</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span><span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">abjad</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">logical_ties</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-1a86523e0a9a7c53f4bd810a15ab748ec8ad52eba8beaea54fcd6f697def02d1.ly"><img src="../../_images/lilypond-1a86523e0a9a7c53f4bd810a15ab748ec8ad52eba8beaea54fcd6f697def02d1.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span><span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">4</span><span class="p">],</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">abjad</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">logical_ties</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-6e8a590fcdbd876a71127b6b5b09d7aa2ec7695bb9de4dd489631a04ca80fbe7.ly"><img src="../../_images/lilypond-6e8a590fcdbd876a71127b6b5b09d7aa2ec7695bb9de4dd489631a04ca80fbe7.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">chord_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">chord_groups</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">abjad</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">logical_ties</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-071b52126cb9d191316a5de9dd12f643e450ef91aca59c92a6ab244f9086fb31.ly"><img src="../../_images/lilypond-071b52126cb9d191316a5de9dd12f643e450ef91aca59c92a6ab244f9086fb31.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">allow_chord_duplicates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">chord_boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">chord_groups</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">abjad</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">logical_ties</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-4af2a67907c64e42322644b4e4a36aacfa4c59d18a2535618fae38abf48a2f77.ly"><img src="../../_images/lilypond-4af2a67907c64e42322644b4e4a36aacfa4c59d18a2535618fae38abf48a2f77.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">abjad</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">logical_ties</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">s</span><span class="p">,</span> <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;&quot;dodecaphonic&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">layout_block</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;\accidentalStyle </span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-8a695cd523194fc2c32c621bb9367a5520f64d89d67fc9336335b44a5747e309.ly"><img src="../../_images/lilypond-8a695cd523194fc2c32c621bb9367a5520f64d89d67fc9336335b44a5747e309.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">4</span><span class="p">],</span> <span class="mi">5</span><span class="p">,</span> <span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mi">6</span><span class="p">)],</span>
+<span class="gp">... </span>    <span class="n">allow_chord_duplicates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">abjad</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">logical_ties</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">s</span><span class="p">,</span> <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;&quot;dodecaphonic&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">layout_block</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;\accidentalStyle </span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-62629054f37d2fa1cd42cc32f9ed85df138e8bdd0e9b1b29b476046a0ca31ae6.ly"><img src="../../_images/lilypond-62629054f37d2fa1cd42cc32f9ed85df138e8bdd0e9b1b29b476046a0ca31ae6.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>        <span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+<span class="gp">... </span>        <span class="p">[</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),],</span>
+<span class="gp">... </span>        <span class="mi">2</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+<span class="gp">... </span>    <span class="p">],</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">allow_chord_duplicates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">s</span><span class="p">,</span> <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;&quot;dodecaphonic&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">layout_block</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;\accidentalStyle </span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-36b442c62d47bd3d0cbb899ac449dd1efa3fa472aa1653650d819e07d6675095.ly"><img src="../../_images/lilypond-36b442c62d47bd3d0cbb899ac449dd1efa3fa472aa1653650d819e07d6675095.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_set</span> <span class="o">=</span> <span class="n">microtones</span><span class="o">.</span><span class="n">PitchSegment</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">7</span><span class="p">,</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_set</span> <span class="o">=</span> <span class="n">pitch_set</span> <span class="o">+</span> <span class="n">pitch_set</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_set</span> <span class="o">=</span> <span class="n">pitch_set</span> <span class="o">+</span> <span class="n">pitch_set</span><span class="o">.</span><span class="n">retrograde</span><span class="p">()</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">Fraction</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_set</span> <span class="o">=</span> <span class="n">microtones</span><span class="o">.</span><span class="n">PitchSegment</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="n">evans</span><span class="o">.</span><span class="n">to_nearest_eighth_tone</span><span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pitch_set</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">abjad</span><span class="o">.</span><span class="n">Note</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pitch_set</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pitch_set</span><span class="p">],</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;&quot;dodecaphonic&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">layout_block</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;\accidentalStyle </span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-762108039ed7ab5e4bdea251d59c87d14d408b7bbddafbaff0d1da550de5b8d3.ly"><img src="../../_images/lilypond-762108039ed7ab5e4bdea251d59c87d14d408b7bbddafbaff0d1da550de5b8d3.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_segment</span> <span class="o">=</span> <span class="n">microtones</span><span class="o">.</span><span class="n">PitchSegment</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mi">7</span><span class="p">,</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_segment</span> <span class="o">=</span> <span class="n">pitch_segment</span> <span class="o">+</span> <span class="n">pitch_segment</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_segment</span> <span class="o">=</span> <span class="n">pitch_segment</span> <span class="o">+</span> <span class="n">pitch_segment</span><span class="o">.</span><span class="n">retrograde</span><span class="p">()</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">Fraction</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pitch_segment</span> <span class="o">=</span> <span class="n">microtones</span><span class="o">.</span><span class="n">PitchSegment</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="p">[</span><span class="n">evans</span><span class="o">.</span><span class="n">to_nearest_eighth_tone</span><span class="p">(</span><span class="n">_</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pitch_segment</span><span class="p">]</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">abjad</span><span class="o">.</span><span class="n">Note</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pitch_segment</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pitch_set</span><span class="p">],</span> <span class="n">apply_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;&quot;dodecaphonic&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">layout_block</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;\accidentalStyle </span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-c6c34b35f34133c2c9bffa20e76bf3cbaa763647a8e25b59d252475813815ff7.ly"><img src="../../_images/lilypond-c6c34b35f34133c2c9bffa20e76bf3cbaa763647a8e25b59d252475813815ff7.cropped.svg"/></a>
+</div></div>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ratio_segment</span> <span class="o">=</span> <span class="n">microtones</span><span class="o">.</span><span class="n">RatioSegment</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">)])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ratio_segment</span> <span class="o">=</span> <span class="n">ratio_segment</span> <span class="o">+</span> <span class="n">ratio_segment</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ratio_segment</span> <span class="o">=</span> <span class="n">ratio_segment</span> <span class="o">+</span> <span class="n">ratio_segment</span><span class="o">.</span><span class="n">retrograde</span><span class="p">()</span><span class="o">.</span><span class="n">rotate</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="mi">1</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="n">abjad</span><span class="o">.</span><span class="n">Note</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">ratio_segment</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="n">notes</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">PitchHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">pitch_list</span><span class="o">=</span><span class="p">[</span><span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">ratio_segment</span><span class="p">],</span> <span class="n">as_ratios</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>        <span class="s2">&quot;/Users/evansdsg2/abjad-ext-microtones/abjadext/microtones/lilypond/ekmelos-ji-accidental-markups.ily&quot;</span>
+<span class="gp">... </span>    <span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;&quot;dodecaphonic&quot;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span><span class="o">.</span><span class="n">layout_block</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">fr</span><span class="s2">&quot;\accidentalStyle </span><span class="si">{</span><span class="n">style</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-d135720e4124347ec42868953362d08d78babb9ffe7b613455cc8287eed98594.ly"><img src="../../_images/lilypond-d135720e4124347ec42868953362d08d78babb9ffe7b613455cc8287eed98594.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.PitchHandler.__call__" title="evans.handlers.PitchHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.PitchHandler.name" title="evans.handlers.PitchHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.PitchHandler.state" title="evans.handlers.PitchHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.PitchHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.PitchHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.PitchHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.PitchHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.PitchHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.PitchHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.PitchHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.PitchHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.PitchHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.PitchHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.RhythmHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">RhythmHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rmaker</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">state</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Rhythm Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.RhythmHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rhythm Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">spans</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">TimespanList</span><span class="p">([</span><span class="n">abjad</span><span class="o">.</span><span class="n">Timespan</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Timespan</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">maker</span> <span class="o">=</span> <span class="n">rmakers</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">rmakers</span><span class="o">.</span><span class="n">NoteRhythmMaker</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">RhythmHandler</span><span class="p">(</span><span class="n">rmaker</span><span class="o">=</span><span class="n">maker</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">span</span> <span class="ow">in</span> <span class="n">spans</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">selections</span> <span class="o">=</span> <span class="n">maker</span><span class="p">([</span><span class="n">span</span><span class="o">.</span><span class="n">duration</span><span class="p">])</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">selections</span><span class="p">)</span>
+<span class="gp">... </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-6de7e27a4b538c8b907acf37f6ab9928466bffd7a8d99f320c5d503dd1522fa9.ly"><img src="../../_images/lilypond-6de7e27a4b538c8b907acf37f6ab9928466bffd7a8d99f320c5d503dd1522fa9.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.RhythmHandler.__call__" title="evans.handlers.RhythmHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.RhythmHandler.name" title="evans.handlers.RhythmHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.RhythmHandler.return_state" title="evans.handlers.RhythmHandler.return_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.RhythmHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">durations</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.RhythmHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.RhythmHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.RhythmHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.RhythmHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.RhythmHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.RhythmHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.RhythmHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.RhythmHandler.return_state">
+<code class="sig-name descname">return_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.RhythmHandler.return_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.SlurHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">SlurHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">apply_slur_to</span><span class="o">=</span><span class="default_value">'runs'</span></em>, <em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[1]</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Slur Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Slur Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 c&#39;4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">SlurHandler</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-4e17dcb944b6b584ae786dfd50127bad791ef87f070052bad7e81beaf74a6825.ly"><img src="../../_images/lilypond-4e17dcb944b6b584ae786dfd50127bad791ef87f070052bad7e81beaf74a6825.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.SlurHandler.__call__" title="evans.handlers.SlurHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.SlurHandler.add_slurs" title="evans.handlers.SlurHandler.add_slurs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_slurs</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.SlurHandler.name" title="evans.handlers.SlurHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.SlurHandler.state" title="evans.handlers.SlurHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.SlurHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.SlurHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.SlurHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.SlurHandler.add_slurs">
+<code class="sig-name descname">add_slurs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler.add_slurs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.SlurHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.SlurHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.SlurHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.TempoSpannerHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">TempoSpannerHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tempo_list</span><span class="o">=</span><span class="default_value">[3, 0, 1, '87', 3, 0, 1, '95']</span></em>, <em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[1]</span></em>, <em class="sig-param"><span class="n">padding</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">staff_padding</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">tempo_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">bool_count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Tempo Spanner Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tempo Spanner Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;s4 s4 s4 s4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">TempoSpannerHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">tempo_list</span><span class="o">=</span><span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;87&quot;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;95&quot;</span><span class="p">)],</span>
+<span class="gp">... </span>    <span class="n">boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">padding</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">staff_padding</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">s</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span>
+<span class="gp">... </span>        <span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">,</span>
+<span class="gp">... </span>        <span class="s2">&quot;/Users/evansdsg2/evans/lilypond/evans-spanners.ily&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-bc57cb2a4695ab9e4f45ec48a3389d6ac70e241e5883338a40e9df601b17aca2.ly"><img src="../../_images/lilypond-bc57cb2a4695ab9e4f45ec48a3389d6ac70e241e5883338a40e9df601b17aca2.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TempoSpannerHandler.__call__" title="evans.handlers.TempoSpannerHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.TempoSpannerHandler.add_spanner" title="evans.handlers.TempoSpannerHandler.add_spanner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_spanner</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TempoSpannerHandler.name" title="evans.handlers.TempoSpannerHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.TempoSpannerHandler.state" title="evans.handlers.TempoSpannerHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.TempoSpannerHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.TempoSpannerHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.TempoSpannerHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.TempoSpannerHandler.add_spanner">
+<code class="sig-name descname">add_spanner</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler.add_spanner" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.TempoSpannerHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.TempoSpannerHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TempoSpannerHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.TextSpanHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">TextSpanHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">span_one_positions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_one_style</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_one_padding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attach_span_one_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_two_positions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_two_style</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_two_padding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attach_span_two_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_three_positions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_three_style</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">span_three_padding</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attach_span_three_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">count_1</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">count_2</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">count_3</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'TextSpan Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TextSpanHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text Span Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;c&#39;4 c&#39;4 c&#39;4 r4&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">TextSpanHandler</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">span_one_positions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pont.&quot;</span><span class="p">,</span> <span class="s2">&quot;tast.&quot;</span><span class="p">],</span>
+<span class="gp">... </span>    <span class="n">span_one_style</span><span class="o">=</span><span class="s2">&quot;dashed-line&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">span_one_padding</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">attach_span_one_to</span><span class="o">=</span><span class="s2">&quot;bounds&quot;</span><span class="p">,</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">LilyPondFile</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">staff</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="n">includes</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;/Users/evansdsg2/abjad/docs/source/_stylesheets/abjad.ily&quot;</span><span class="p">],</span>
+<span class="gp">... </span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-561a3c41d4d4cf3fa28e17e1688ef22a9f0e8566bdd7c374bf7b83c5c064406b.ly"><img src="../../_images/lilypond-561a3c41d4d4cf3fa28e17e1688ef22a9f0e8566bdd7c374bf7b83c5c064406b.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TextSpanHandler.__call__" title="evans.handlers.TextSpanHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.TextSpanHandler.name" title="evans.handlers.TextSpanHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TextSpanHandler.state" title="evans.handlers.TextSpanHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.TextSpanHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TextSpanHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.TextSpanHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TextSpanHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.TextSpanHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TextSpanHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.TextSpanHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TextSpanHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.TextSpanHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TextSpanHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="evans.handlers.TrillHandler">
+<em class="property">class </em><code class="sig-prename descclassname">evans.handlers.</code><code class="sig-name descname">TrillHandler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">boolean_vector</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">continuous</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">count</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'Trill Handler'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TrillHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trill Handler</p>
+<div class="example docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">staff</span> <span class="o">=</span> <span class="n">abjad</span><span class="o">.</span><span class="n">Staff</span><span class="p">(</span><span class="s2">&quot;&lt;c&#39; d&#39;&gt;4 c&#39;4 c&#39;4 &lt;c&#39; d&#39;&gt;4 c&#39;4 c&#39;4 c&#39;4 c&#39;4 &quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span> <span class="o">=</span> <span class="n">evans</span><span class="o">.</span><span class="n">TrillHandler</span><span class="p">(</span><span class="n">boolean_vector</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">continuous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">handler</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">abjad</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">staff</span><span class="p">)</span>  
+</pre></div>
+</div>
+<div class="uqbar-book">
+    <a href="../../_images/lilypond-50839ecefc2be056e1f5d59c1583e5a9d7ebdaab9a0ba85febfbdb3eefabad82.ly"><img src="../../_images/lilypond-50839ecefc2be056e1f5d59c1583e5a9d7ebdaab9a0ba85febfbdb3eefabad82.cropped.svg"/></a>
+</div></div>
+<hr/><p class="class-header rubric">Attributes Summary</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TrillHandler.__call__" title="evans.handlers.TrillHandler.__call__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__call__</span></code></a></p></td>
+<td><p>Call self as a function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#evans.handlers.TrillHandler.name" title="evans.handlers.TrillHandler.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#evans.handlers.TrillHandler.state" title="evans.handlers.TrillHandler.state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">state</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<hr/><p class="class-header rubric">Special methods</p>
+<dl class="py method">
+<dt id="evans.handlers.TrillHandler.__call__">
+<em class="property">overridden </em><code class="sig-name descname">__call__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">selections</span></em><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TrillHandler.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.TrillHandler.__repr__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__repr__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TrillHandler.__repr__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+</div>
+<div class="inherited docutils container">
+<dl class="py method">
+<dt id="evans.handlers.TrillHandler.__str__">
+<code class="sig-prename descclassname">(<a class="reference internal" href="#evans.handlers.Handler" title="evans.handlers.Handler"><code class="descclassname docutils literal notranslate"><span class="pre">Handler</span></code></a>).</code><code class="sig-name descname">__str__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TrillHandler.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return str(self).</p>
+</dd></dl>
+
+</div>
+<hr/><p class="class-header rubric">Methods</p>
+<dl class="py method">
+<dt id="evans.handlers.TrillHandler.name">
+<code class="sig-name descname">name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TrillHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="evans.handlers.TrillHandler.state">
+<code class="sig-name descname">state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#evans.handlers.TrillHandler.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metmod.html" class="btn btn-neutral float-right" title="metmod" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="consort/rotate.html" class="btn btn-neutral float-left" title="rotate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Gregory Rowland Evans
+      <span class="lastupdated">
+        Last updated on Jul 20, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

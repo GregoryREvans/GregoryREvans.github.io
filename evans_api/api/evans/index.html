@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>evans &mdash; Evans API  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/abjad.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/uqbar.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script defer="defer" src="../../_static/copybutton.js"></script>
+        <script src="../../_static/ga.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="commands" href="commands.html" />
+    <link rel="prev" title="Evans API" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> Evans API
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Evans API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">evans</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="commands.html">commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="consort/index.html">consort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="handlers.html">handlers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="metmod.html">metmod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pitch.html">pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rtm.html">rtm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="segmentmaker.html">segmentmaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sequence.html">sequence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="timespan.html">timespan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Evans API</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Evans API</a> &raquo;</li>
+        
+      <li>evans</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/evans/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="evans">
+<span id="id1"></span><h1>evans<a class="headerlink" href="#evans" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-evans"></span><p>Evans API</p>
+<div class="svg-container docutils container">
+<div class="graphviz"><object data="../../_images/inheritance-46866cc0024a69cb48b9303eff0e3b3e56415d20.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">digraph InheritanceGraph {
+	graph [bgcolor=transparent,
+		color=lightsteelblue2,
+		fontname=Arial,
+		fontsize=10,
+		outputorder=edgesfirst,
+		overlap=prism,
+		penwidth=2,
+		rankdir=LR,
+		splines=spline,
+		style=&quot;dashed, rounded&quot;,
+		truecolor=true
+	];
+	node [colorscheme=pastel19,
+		fontname=Arial,
+		fontsize=10,
+		height=0,
+		penwidth=2,
+		shape=box,
+		style=&quot;filled, rounded&quot;,
+		width=0
+	];
+	edge [color=lightslategrey,
+		penwidth=1
+	];
+	subgraph &quot;cluster_abjad.timespan&quot; {
+		graph [label=&quot;abjad.timespan&quot;];
+		node [color=1];
+		&quot;abjad.timespan.Timespan&quot;		 [color=1,
+			label=Timespan];
+	}
+	subgraph cluster_builtins {
+		graph [label=builtins];
+		node [color=2];
+		&quot;builtins.object&quot;		 [URL=&quot;https://docs.python.org/3.7/library/functions.html#object&quot;,
+			color=2,
+			label=object,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.commands&quot; {
+		graph [label=&quot;evans.commands&quot;];
+		node [color=3];
+		&quot;evans.commands.Command&quot;		 [URL=&quot;../api/evans/commands.html#evans.commands.Command&quot;,
+			color=3,
+			label=Command,
+			target=_top];
+		&quot;evans.commands.HandlerCommand&quot;		 [URL=&quot;../api/evans/commands.html#evans.commands.HandlerCommand&quot;,
+			color=3,
+			label=&quot;Handler\nCommand&quot;,
+			target=_top];
+		&quot;evans.commands.RhythmCommand&quot;		 [URL=&quot;../api/evans/commands.html#evans.commands.RhythmCommand&quot;,
+			color=3,
+			label=&quot;Rhythm\nCommand&quot;,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.consort&quot; {
+		graph [label=&quot;evans.consort&quot;];
+		node [color=4];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot;		 [URL=&quot;../api/evans/consort/AbjadObject.html#evans.consort.AbjadObject.AbjadObject&quot;,
+			color=4,
+			label=&quot;Abjad\nObject&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadValueObject.AbjadValueObject&quot;		 [URL=&quot;../api/evans/consort/AbjadValueObject.html#evans.consort.AbjadValueObject.AbjadValueObject&quot;,
+			color=4,
+			label=&quot;Abjad\nValue\nObject&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.AbjadValueObject.AbjadValueObject&quot;		 [minlen=1];
+		&quot;evans.consort.LogicalTieCollection.LogicalTieCollection&quot;		 [URL=&quot;../api/evans/consort/LogicalTieCollection.html#evans.consort.LogicalTieCollection.LogicalTieCollection&quot;,
+			color=4,
+			label=&quot;Logical\nTie\nCollection&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.LogicalTieCollection.LogicalTieCollection&quot;		 [minlen=2];
+		&quot;evans.consort.RatioPartsExpression.RatioPartsExpression&quot;		 [URL=&quot;../api/evans/consort/RatioPartsExpression.html#evans.consort.RatioPartsExpression.RatioPartsExpression&quot;,
+			color=4,
+			label=&quot;Ratio\nParts\nExpression&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.RatioPartsExpression.RatioPartsExpression&quot;		 [minlen=3];
+		&quot;evans.consort.TimespanCollection.TimespanCollection&quot;		 [URL=&quot;../api/evans/consort/TimespanCollection.html#evans.consort.TimespanCollection.TimespanCollection&quot;,
+			color=4,
+			label=&quot;Timespan\nCollection&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.TimespanCollection.TimespanCollection&quot;		 [minlen=4];
+		&quot;evans.consort.TimespanCollectionNode.TimespanCollectionNode&quot;		 [URL=&quot;../api/evans/consort/TimespanCollectionNode.html#evans.consort.TimespanCollectionNode.TimespanCollectionNode&quot;,
+			color=4,
+			label=&quot;Timespan\nCollection\nNode&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.TimespanCollectionNode.TimespanCollectionNode&quot;		 [minlen=1];
+		&quot;evans.consort.TimespanSimultaneity.TimespanSimultaneity&quot;		 [URL=&quot;../api/evans/consort/TimespanSimultaneity.html#evans.consort.TimespanSimultaneity.TimespanSimultaneity&quot;,
+			color=4,
+			label=&quot;Timespan\nSimultaneity&quot;,
+			target=_top];
+		&quot;evans.consort.AbjadObject.AbjadObject&quot; -&gt; &quot;evans.consort.TimespanSimultaneity.TimespanSimultaneity&quot;		 [minlen=2];
+	}
+	subgraph &quot;cluster_evans.handlers&quot; {
+		graph [label=&quot;evans.handlers&quot;];
+		node [color=5];
+		&quot;evans.handlers.ArticulationHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.ArticulationHandler&quot;,
+			color=5,
+			label=&quot;Articulation\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.BendHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.BendHandler&quot;,
+			color=5,
+			label=&quot;Bend\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.BisbigliandoHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.BisbigliandoHandler&quot;,
+			color=5,
+			label=&quot;Bisbigliando\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.ClefHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.ClefHandler&quot;,
+			color=5,
+			label=&quot;Clef\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.DynamicHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.DynamicHandler&quot;,
+			color=5,
+			label=&quot;Dynamic\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.GettatoHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.GettatoHandler&quot;,
+			color=5,
+			label=&quot;Gettato\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.GlissandoHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.GlissandoHandler&quot;,
+			color=5,
+			label=&quot;Glissando\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.GraceHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.GraceHandler&quot;,
+			color=5,
+			label=&quot;Grace\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.Handler&quot;,
+			color=5,
+			label=Handler,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.ArticulationHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.BendHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.BisbigliandoHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.ClefHandler&quot;		 [minlen=4];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.DynamicHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.GettatoHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.GlissandoHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.GraceHandler&quot;		 [minlen=4];
+		&quot;evans.handlers.NoteheadHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.NoteheadHandler&quot;,
+			color=5,
+			label=&quot;Notehead\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.NoteheadHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.PitchHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.PitchHandler&quot;,
+			color=5,
+			label=&quot;Pitch\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.PitchHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.RhythmHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.RhythmHandler&quot;,
+			color=5,
+			label=&quot;Rhythm\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.RhythmHandler&quot;		 [minlen=3];
+		&quot;evans.handlers.SlurHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.SlurHandler&quot;,
+			color=5,
+			label=&quot;Slur\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.SlurHandler&quot;		 [minlen=4];
+		&quot;evans.handlers.TempoSpannerHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.TempoSpannerHandler&quot;,
+			color=5,
+			label=&quot;Tempo\nSpanner\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.TempoSpannerHandler&quot;		 [minlen=1];
+		&quot;evans.handlers.TextSpanHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.TextSpanHandler&quot;,
+			color=5,
+			label=&quot;Text\nSpan\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.TextSpanHandler&quot;		 [minlen=2];
+		&quot;evans.handlers.TrillHandler&quot;		 [URL=&quot;../api/evans/handlers.html#evans.handlers.TrillHandler&quot;,
+			color=5,
+			label=&quot;Trill\nHandler&quot;,
+			target=_top];
+		&quot;evans.handlers.Handler&quot; -&gt; &quot;evans.handlers.TrillHandler&quot;		 [minlen=3];
+	}
+	subgraph &quot;cluster_evans.rtm&quot; {
+		graph [label=&quot;evans.rtm&quot;];
+		node [color=6];
+		&quot;evans.rtm.RTMMaker&quot;		 [URL=&quot;../api/evans/rtm.html#evans.rtm.RTMMaker&quot;,
+			color=6,
+			label=RTMMaker,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.segmentmaker&quot; {
+		graph [label=&quot;evans.segmentmaker&quot;];
+		node [color=7];
+		&quot;evans.segmentmaker.NoteheadBracketMaker&quot;		 [URL=&quot;../api/evans/segmentmaker.html#evans.segmentmaker.NoteheadBracketMaker&quot;,
+			color=7,
+			label=&quot;Notehead\nBracket\nMaker&quot;,
+			target=_top];
+		&quot;evans.segmentmaker.SegmentMaker&quot;		 [URL=&quot;../api/evans/segmentmaker.html#evans.segmentmaker.SegmentMaker&quot;,
+			color=7,
+			label=&quot;Segment\nMaker&quot;,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.sequence&quot; {
+		graph [label=&quot;evans.sequence&quot;];
+		node [color=8];
+		&quot;evans.sequence.CyclicList&quot;		 [URL=&quot;../api/evans/sequence.html#evans.sequence.CyclicList&quot;,
+			color=8,
+			label=&quot;Cyclic\nList&quot;,
+			target=_top];
+		&quot;evans.sequence.MarkovChain&quot;		 [URL=&quot;../api/evans/sequence.html#evans.sequence.MarkovChain&quot;,
+			color=8,
+			label=&quot;Markov\nChain&quot;,
+			target=_top];
+	}
+	subgraph &quot;cluster_evans.timespan&quot; {
+		graph [label=&quot;evans.timespan&quot;];
+		node [color=9];
+		&quot;evans.timespan.SilentTimespan&quot;		 [URL=&quot;../api/evans/timespan.html#evans.timespan.SilentTimespan&quot;,
+			color=9,
+			label=&quot;Silent\nTimespan&quot;,
+			target=_top];
+		&quot;evans.timespan.TimespanMaker&quot;		 [URL=&quot;../api/evans/timespan.html#evans.timespan.TimespanMaker&quot;,
+			color=9,
+			label=&quot;Timespan\nMaker&quot;,
+			target=_top];
+		&quot;evans.timespan.TimespanSpecifier&quot;		 [URL=&quot;../api/evans/timespan.html#evans.timespan.TimespanSpecifier&quot;,
+			color=9,
+			label=&quot;Timespan\nSpecifier&quot;,
+			target=_top];
+	}
+	&quot;abjad.timespan.Timespan&quot; -&gt; &quot;evans.timespan.SilentTimespan&quot;	 [minlen=1];
+	&quot;builtins.object&quot; -&gt; &quot;abjad.timespan.Timespan&quot;	 [minlen=1];
+	&quot;builtins.object&quot; -&gt; &quot;evans.commands.Command&quot;	 [minlen=2];
+	&quot;builtins.object&quot; -&gt; &quot;evans.commands.HandlerCommand&quot;	 [minlen=3];
+	&quot;builtins.object&quot; -&gt; &quot;evans.commands.RhythmCommand&quot;	 [minlen=4];
+	&quot;builtins.object&quot; -&gt; &quot;evans.consort.AbjadObject.AbjadObject&quot;;
+	&quot;builtins.object&quot; -&gt; &quot;evans.handlers.Handler&quot;;
+	&quot;builtins.object&quot; -&gt; &quot;evans.rtm.RTMMaker&quot;	 [minlen=1];
+	&quot;builtins.object&quot; -&gt; &quot;evans.segmentmaker.NoteheadBracketMaker&quot;	 [minlen=2];
+	&quot;builtins.object&quot; -&gt; &quot;evans.segmentmaker.SegmentMaker&quot;	 [minlen=3];
+	&quot;builtins.object&quot; -&gt; &quot;evans.sequence.CyclicList&quot;	 [minlen=4];
+	&quot;builtins.object&quot; -&gt; &quot;evans.sequence.MarkovChain&quot;	 [minlen=1];
+	&quot;builtins.object&quot; -&gt; &quot;evans.timespan.TimespanMaker&quot;	 [minlen=2];
+	&quot;builtins.object&quot; -&gt; &quot;evans.timespan.TimespanSpecifier&quot;	 [minlen=3];
+}</p></object></div>
+</div>
+<hr/><p class="section-header rubric">Subpackages</p>
+<div class="toctree-wrapper compound">
+</div>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="commands.html#module-evans.commands" title="evans.commands"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commands</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="consort/index.html#module-evans.consort" title="evans.consort"><code class="xref py py-obj docutils literal notranslate"><span class="pre">consort</span></code></a></p></td>
+<td><p>A port of a variety of tools from <code class="docutils literal notranslate"><span class="pre">Consort</span></code> by Josiah Wolf Oberholtzer to <cite>Abjad 3.1</cite>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="handlers.html#module-evans.handlers" title="evans.handlers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">handlers</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="metmod.html#module-evans.metmod" title="evans.metmod"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metmod</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pitch.html#module-evans.pitch" title="evans.pitch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pitch</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="rtm.html#module-evans.rtm" title="evans.rtm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rtm</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="segmentmaker.html#module-evans.segmentmaker" title="evans.segmentmaker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">segmentmaker</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="sequence.html#module-evans.sequence" title="evans.sequence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sequence</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="timespan.html#module-evans.timespan" title="evans.timespan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timespan</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commands.html" class="btn btn-neutral float-right" title="commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Evans API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2018-2020, Gregory Rowland Evans
+      <span class="lastupdated">
+        Last updated on Jul 20, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
