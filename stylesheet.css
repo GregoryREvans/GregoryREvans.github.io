@@ -3,13 +3,20 @@ background-color:black;
 color:white;
 padding:20px;
 font-family:"STIXGeneral",didot,serif;
-font-size:16px;
+font-size: calc(7px + (19 - 7) * ((100vw - 300px) / (1600 - 300)));
+line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 font-weight:100;
 }
 
+/* body {
+  font-size: calc(7px + (14 - 7) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+} */
+
 a {
     color: #f3f3f3;
-    font-size:17px;
+    font-size: calc(7px + (20 - 7) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
     text-decoration:none;
 }
 
@@ -132,11 +139,11 @@ th {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 10px;
   margin: 4px 2px;
   cursor: pointer;
-  font-family:didot,serif;
-  font-size:13px;
+  font-family:"STIXGeneral",didot,serif;
+  font-size: calc(7px + (13 - 7) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 }
 
 .button:hover {
@@ -147,4 +154,9 @@ th {
 .outlined-title {
     color: black;
     -webkit-text-stroke: 1px #f3f3f3;
+}
+
+table {
+    font-size: calc(7px + (20 - 7) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 }
