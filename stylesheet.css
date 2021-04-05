@@ -1,6 +1,6 @@
 html {
-background-color:black;
-color:white;
+background-color:rgb(65, 60, 57);
+color:rgb(243, 242, 235);
 padding:20px;
 font-family:"STIXGeneral",didot,serif;
 font-size: calc(7px + (19 - 7) * ((100vw - 300px) / (1600 - 300)));
