@@ -106,6 +106,17 @@ p {
     float: left;
 }
 
+.left-text-transparent-background {
+    float: left;
+    /* background:rgba(255,255,255,0.75); */
+    color: white;
+    width: 90%;
+    /* height: 50%; */
+    margin-left: 4%;
+    /* margin-top: 30%; */
+    position: center;
+}
+
 .left-picture {
  float: left;
  padding: 0 20px 20px 0;
@@ -113,6 +124,11 @@ p {
 
 .right-picture {
  float: right;
+ padding: 0 0 0 0;
+}
+
+.center-picture {
+ position: center;
  padding: 0 20px 20px 0;
 }
 
@@ -159,4 +175,33 @@ th {
 table {
     font-size: calc(7px + (20 - 7) * ((100vw - 300px) / (1600 - 300)));
     line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+}
+
+
+
+.hack-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.hack-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background:rgba(255,255,255,0.5); */
+  font-size:300%;
+  text-shadow: 2px 2px 0px #000000;
+}
+
+.hack-centered-lower {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 120%);
+  /* background:rgba(255,255,255,0.5); */
+  font-size:150%;
+  text-shadow: 2px 2px 0px #000000;
 }
